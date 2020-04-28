@@ -99,7 +99,13 @@ img {
 
   // Header inner
   &-inner {
-    height: 5rem;
+    background: $bg-image;
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-position-y: 30%;
+    background-size: cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 
 }
@@ -119,7 +125,6 @@ img {
         padding-bottom: 0.4rem;
       }
     }
-
   }
 
   // Home section B
@@ -182,8 +187,8 @@ img {
         background: $dark-color;
         color:set-text-color($dark-color);
         padding: 2rem;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         line-height: 1;
         position: relative;
         transition: all 1s;
@@ -201,6 +206,48 @@ img {
       }
     }
   }
+}
+
+// About
+
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+      'bioimage bio bio'
+      'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+    }
+    // Grid areas
+    .bio-image {
+      grid-area: bioimage;
+    }
+
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
 }
 
 // Footer
