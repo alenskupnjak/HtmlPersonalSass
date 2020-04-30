@@ -261,7 +261,7 @@ img {
       background-color: #ccc; }
 
 #home-c .process {
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1.5rem;
   text-align: center; }
@@ -416,3 +416,55 @@ img {
       padding: 0.5rem; }
       #main-footer .footer-content .social .fab:hover {
         background: #ffbc00; }
+
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem; }
+    #header-home .header-content {
+      padding-top: 2rem; } }
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center; }
+    #main-nav li {
+      padding: 1rem; }
+  #header-home {
+    height: 10rem;
+    border-bottom: 3px solid #ffbc00;
+    background-position: 20% 30%; }
+    #header-home .header-content {
+      display: none; }
+  #header-inner {
+    height: 10rem; }
+  #home-a .specials div {
+    border-bottom: 1px solid #ffbc00; }
+    #home-a .specials div:last-child {
+      border: none; }
+  #home-b .stats div {
+    padding: 1.5rem 0; }
+  #about-a .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'aw1' 'aw2' 'aw3'; }
+  #about-c {
+    display: none; }
+  #contact-a .text-fields {
+    grid-template-areas: 'name' 'email' 'subject' 'phone' 'message'; }
+  #contact-c h1 {
+    font-size: 1.5rem; }
+  #contact-b {
+    padding: 0.3rem; }
+    #contact-b .contact-info {
+      grid-template-columns: 1fr;
+      padding: 0.5rem; }
+      #contact-b .contact-info div {
+        margin-top: 1rem; }
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials {
+    grid-template-columns: 1fr; }
+  #main-footer .footer-content {
+    flex-direction: column; }
+    #main-footer .footer-content .social .fab {
+      padding: 0.5rem;
+      margin-bottom: 1rem; } }

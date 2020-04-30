@@ -163,7 +163,7 @@ img {
   // Home section C
   &-c {
     .process {
-      display: flex;
+      display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 1.5rem;
       text-align: center;
@@ -397,3 +397,6 @@ img {
     }
   }
 }
+
+// Import media
+@import 'media';
